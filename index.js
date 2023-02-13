@@ -16,8 +16,19 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
-  // res.send('Hello World!')
   res.render('index', data)
+})
+
+app.get('/squadA', function (req, res) {
+  res.render('squadA')
+})
+
+app.get('/squadB', function (req, res) {
+  res.render('squadB')
+})
+
+app.get('/squatC', function (req, res) {
+  res.render('squatC')
 })
 
 // Stel het poortnummer in waar express op gaat luisteren
