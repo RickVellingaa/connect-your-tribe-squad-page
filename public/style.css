@@ -27,7 +27,7 @@
     --titleFont: fontBold;
     --textFont: fontLight;
     --fallbackFont: fontBook;
-    --navbarWidth: 250px;
+    --navbarWidth: 280px;
 }
 
 * {
@@ -44,13 +44,18 @@ h4 {
     font-family: var(--titleFont);
 }
 
-p {
+p,
+ul,
+li,
+a,
+span {
     font-family: var(--textFont);
 }
 
 /* General styling */
 
-html, body {
+html,
+body {
     background-color: var(--bg-color);
     height: 100%;
 }
@@ -63,7 +68,7 @@ main {
     flex-direction: row;
 }
 
-.navigation{
+.navigation {
     width: var(--navbarWidth);
     height: 100%;
     background-color: var(--black-color);
@@ -71,12 +76,63 @@ main {
     flex-direction: column;
 }
 
-.navigation .navigation__fast, .navigation .navigation__links {
+.navigation .navigation__fast,
+.navigation .navigation__links,
+.navigation__playlist {
     padding: 0 24px;
 }
 
 .navigation .navigation__fast {
     padding-top: 40px;
+}
+
+.navigation__list {
+    padding-top: 3em;
+}
+
+.navigation__links .navigation__list {
+    padding-top: 2em;
+}
+
+.navigation__links hr {
+    margin: 0;
+    padding-top: .8rem;
+    border: none;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.4);
+}
+
+.navigation__item {
+    color: var(--txt-color);
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: .9em;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .5rem 0;
+    transition: .3s;
+}
+
+.navigation__item:hover {
+    color: var(--white-color);
+    transition: .3s;
+}
+
+.navigation__item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.navigation__heart {
+    border-radius: 5px;
+}
+
+.navigation__item a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .logo {
@@ -91,8 +147,17 @@ main {
     font-weight: 900;
 }
 
-.playlists{
+.navigation__playlist .navigation__list {
+    padding-top: 1rem;
+}
+
+.navigation__playlist .navigation__list .navigation__item {
+    padding: .4rem 0;
+}
+
+.playlists {
     width: calc(100% - var(--navbarWidth));
     height: 100%;
-    /* background: linear-gradient(to bottom, var(--fdnd-color), var(--bg-color) 25%); */
+    position: relative;
+    background: linear-gradient(to bottom, var(--fdnd-color), var(--bg-color) 25%);
 }
