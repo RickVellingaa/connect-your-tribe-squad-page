@@ -9,7 +9,6 @@
   * [Installatie](#installatie)
   * [Gebruik](#gebruik)
   * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
@@ -26,8 +25,3 @@
 
 ## Bronnen
 
-## Licentie
-
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
-
-This work is licensed under [GNU GPLv3](./LICENSE).
