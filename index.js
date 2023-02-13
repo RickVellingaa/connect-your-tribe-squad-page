@@ -31,6 +31,19 @@ app.get('/squatC', function (req, res) {
   res.render('squatC')
 })
 
+app.get('/liked', function (req, res) {
+  res.render('liked')
+})
+
+app.get('/rest', function (req, res) {
+  res.render('rest')
+})
+
+app.get('/tribe', function (req, res) {
+  res.render('tribe')
+})
+
+
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)
 
@@ -39,4 +52,3 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
-
