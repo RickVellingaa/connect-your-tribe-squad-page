@@ -3,11 +3,38 @@
 <main>
     <%- include('./partials/navigation') %>
     <div class="playlists">
-
+       <div class="playlists__container">
+            <h1 class="playlists__heading"></h1>
+            <div class="playlists__list">
+                <ul>
+                    <a href="squadA"><li class="playlists__item"><img src="/assets/favicon.jpeg" alt="">Squad A</li></a>
+                    <a href="squadB"><li class="playlists__item"><img src="/assets/favicon.jpeg" alt="">Squad B</li></a>
+                    <a href="squatC"><li class="playlists__item"><img src="/assets/favicon.jpeg" alt="">Squad C</li></a>
+                    <a href="tribe"><li class="playlists__item"><img src="/assets/favicon.jpeg" alt="">Alle studenten</li></a>
+                    <a href="liked"><li class="playlists__item"><img src="/assets/liked-student.png" alt="">Gelikte studenten</li></a>
+                    <a href="rest"><li class="playlists__item"><img src="/assets/favicon.jpeg" alt="">Overige studenten</li></a>
+                </ul>
+            </div>
+       </div>
+       <div class="students">
+        <table>
+            <tbody>
+                <tr>
+                    <th>#</th>
+                    <th>Student</th>
+                    <th>Squad</th>
+                    <th>Github</th>
+                    <th>
+                        <ion-icon name="time-outline"></ion-icon>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     </div>
 </main>
 
 <!-- Link naar JS -->
-<!-- <script src="./scripts/script.js"></script> -->
+<script src="./scripts/script.js"></script>
 
 <%- include('./partials/foot') %>

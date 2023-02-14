@@ -176,15 +176,72 @@ a {
 }
 
 /* Homepagina CSS */
-.playlists {
+.playlists__container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 
+.playlists__heading {
+    font-size: 2.3rem;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    margin-top: 2.5rem;
+}
+
+.playlists__list {
+    width: 100%;
+    height: auto;
+    margin-top: .5rem;
+    position: relative;
+}
+
+ul:hover .playlists__item {
+    background-color: hsla(0,10%,100%,.15);
+    transition: .3s;
+}
+
+ul .playlists__item {
+    transition: .3s;
+}
+
+.playlists__list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    list-style-type: none;
+}
+
+.playlists__list ul a li {
+    width: 100%;
+    height: auto;
+    font-family: var(--titleFont);
+    font-size: 1.1rem;
+    color: var(--white-color);
+    text-decoration: none;
+    background-color: var(--container-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-shadow: rgb(0, 0, 0) 2px 0 10px;
+    border-radius: 10px;
+}
+
+.playlists__list ul a li img {
+    height: 80px;
+    margin-right: 1rem;
+    aspect-ratio: 1/1;
+    border-radius: 10px 0 0 10px;
+}
+
+.playlists .students {
+    margin-top: 3rem;
 }
 
 /* Detail pagina CSS */
-.detail {
-
-}
-
 .detail__header { 
     height: 30vh;
     min-height: 340px;
