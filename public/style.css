@@ -426,4 +426,14 @@ ul .playlists__item {
         grid-gap: 20px;
         list-style-type: none;
     }
+    .detail__logo {
+        display: none;
+        visibility: hidden;
+    }
+    .detail__squad {
+        padding-left: 0;
+    }
+    .detail__header {
+        min-height: auto;
+    }
   }
