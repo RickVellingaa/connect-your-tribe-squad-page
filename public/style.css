@@ -99,6 +99,18 @@ a {
     background-color: var(--black-color);
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.hidden {
+    position: relative !important;
+}
+
+.navigation__fast {
+    position: relative;
 }
 
 .navigation .navigation__fast,
@@ -183,6 +195,23 @@ a {
     height: auto;
     padding-left: 2rem;
     padding-right: 2rem;
+}
+
+.playlists__menu, .playlists__menu1 {
+    color: var(--white-color);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    font-size: 2.5em;
+    display: none;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.playlists__menu1 {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .playlists__heading {
@@ -353,4 +382,48 @@ ul .playlists__item {
   ion-icon {
     color: var(--txt-color);
     font-size: 1.4em;
+  }
+
+  /* Responsive media query's */
+  @media screen and (max-width: 1200px) {
+    .playlists__list ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+        list-style-type: none;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    .hidden {
+        display: none;
+
+    }
+    .detail, .playlists{
+        width: 100%;
+    }
+    .playlists__heading {
+        margin-top: 0rem;
+    }
+    .playlists__menu {
+        display: inline-block;
+        visibility: visible;
+    }
+    .playlists__menu1 {
+        display: inline-block;
+        visibility: visible;
+        padding: 0;
+        margin: .5rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .playlists__list ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 20px;
+        list-style-type: none;
+    }
   }
