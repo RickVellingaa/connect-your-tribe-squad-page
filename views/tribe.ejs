@@ -16,14 +16,20 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>#</th>
                         <th>Student</th>
-                        <th>Squad</th>
-                        <th>Github</th>
-                        <th>
+                        <th>Nickname</th>
+                        <th>Website</th>
+                        <!-- <th>
                             <ion-icon name="time-outline"></ion-icon>
-                        </th>
+                        </th> -->
                     </tr>
+                    <% members.forEach(member => { %>
+                    <tr>
+                        <td> <% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""> <% }else{ %><img src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %></td>
+                        <td><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></td>
+                        <td><a href="<%= member.website %>"><ion-icon name="logo-github"></ion-icon></a></td>
+                    </tr>
+                    <% }) %>
                 </tbody>
             </table>
         </div>

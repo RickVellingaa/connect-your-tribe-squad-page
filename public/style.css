@@ -58,6 +58,11 @@ html,
 body {
     background-color: var(--bg-color);
     height: 100%;
+    overflow: auto;
+}
+
+html, body, main, .navigation, .detail, .playlists {
+    overflow: auto;
 }
 
 main {
@@ -169,10 +174,6 @@ a {
     height: 100%;
     position: relative;
     background: linear-gradient(to bottom, var(--fdnd-color), var(--bg-color) 35%);
-}
-
-.detail {
-    background: linear-gradient(to bottom, var(--fdnd-color), var(--bg-color) 50%);
 }
 
 /* Homepagina CSS */
@@ -321,13 +322,32 @@ ul .playlists__item {
   }
   
   .students td, th {
-    border-bottom: 1px solid #dddddd;
     text-align: left;
     padding: .2rem 0;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 2px 0 10px;
+    font-family: var(--titleFont);
+  }
+
+  .students tr:first-child {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .students tr td img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
   }
   
-  .students tr:nth-child(even) {
-    background-color: #dddddd;
+  .students tr td:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .students tr td{
+    font-size: .8rem;
   }
 
   ion-icon {
