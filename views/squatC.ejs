@@ -16,30 +16,24 @@
             </div>
         </section>
         <div class="students">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Student</th>
-                        <th>Nickname</th>
-                        <th>Squad</th>
-                        <th>Website</th>
-                        <!-- <th>
-                            <ion-icon name="time-outline"></ion-icon>
-                        </th> -->
-                    </tr>
-                    <% squad.members.forEach(member => { %>
-                    <tr>
-                        <td> <% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""> <% }else{ %><img
-                                src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %></td>
-                        <td><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></td>
-                        <td><%= squad.name %></td>
-                        <td><a href="<%= member.website %>">
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a></td>
-                    </tr>
-                    <% }) %>
-                </tbody>
-            </table>
+            <div class="students__menu">
+                <div>Student</div>
+                <div>Roepnaam</div>
+                <div>Squat</div>
+            </div>
+            <% squad.members.forEach(member => { %>
+            <a href="/members?member=<%= member.id %>">
+                <div class="students__list">
+                    <div><% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""><% }else{ %><img
+                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %>
+                        <%= member.surname %></div>
+                    <div><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></div>
+                    <div>
+                       <%= squad.name %>
+                    </div>
+                </div>
+            </a>
+            <% }) %>
         </div>
     </div>
 </main>

@@ -1,7 +1,13 @@
 <%- include('./partials/head') %>
 
 <main>
-  <div class="members"></div>
+  <div class="members">
+    <p><%= member.prefix %></p>
+    <p><%= member.name %></p>
+    <p><%= member.surname %></p>
+    <p><%= member.nickname %></p>
+    <a href="<%= member.website %>"><ion-icon name="logo-github"></ion-icon></a>
+  </div>
 </main>
 
 <script src="./scripts/script.js"></script>

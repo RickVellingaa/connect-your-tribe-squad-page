@@ -364,45 +364,54 @@ ul .playlists__item {
     padding: 0 2rem;
 }
 
-.students table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.students td,
-th {
-    text-align: left;
-    padding: .2rem 0;
-    color: white;
-    text-shadow: rgb(0, 0, 0) 2px 0 10px;
+.students .students__list,
+.students .students__menu {
+    display: grid;
     font-family: var(--titleFont);
+    color: var(--white-color);
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-.students tr:first-child {
-    border-bottom: 1px solid #dddddd;
+.students .students__menu {
+    color: var(--txt-color);
+    font-family: var(--textFont);
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--txt-color);
 }
 
-.students tr td img {
+.students .students__list div {
+    font-size: .9rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.students .students__list:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.students .students__list div:first-child {
+    font-size: 1rem;
+}
+
+.students .students__list img {
     width: 50px;
     aspect-ratio: 1/1;
     margin-right: 10px;
 }
 
-.students tr td:first-child {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 1rem;
+.ion-icon {
+    z-index: 100;
 }
 
-.students tr td {
-    font-size: .8rem;
-}
-
-ion-icon {
-    color: var(--txt-color);
-    font-size: 1.4em;
+/* Persoonlijke pagina  */
+.members {
+    color: white;
+    font-family: var(--textFont);
 }
 
 /* Responsive media query's */
