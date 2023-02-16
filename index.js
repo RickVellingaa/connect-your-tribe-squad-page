@@ -80,9 +80,6 @@ app.get('/members', (request, response) => {
   let id = request.query.member || 'cldemsxee3oeg0avw60bcsibn'
   let memberUrl = 'https://whois.fdnd.nl/api/v1/member?id=' + id
   
-  let table = document.querySelector('.tableCell')
-  table.addEventListener('click', navigate);
-
   fetchJson(memberUrl).then((data) => {
     // console.log(data)
     if (!data.member.gitHubHandle.startsWith('https://www.github.com/')) {
@@ -93,11 +90,6 @@ app.get('/members', (request, response) => {
 
 })
 
-
-function navigate() {
-  window.location = `detail.html?id=${member.id}`
-  console.log('hoi')
-}
 
 // Maak een route voor de members
 app.get('/about', (request, response) => {
