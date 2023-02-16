@@ -1,7 +1,8 @@
 <%- include('./partials/head') %>
-
-<main>
+<nav>
     <%- include('./partials/navigation') %>
+</nav>
+<main>
     <div class="detail">
         <ion-icon class="playlists__menu" name="menu-outline"></ion-icon>
         <section class="detail__header">
@@ -28,10 +29,13 @@
                     </tr>
                     <% squad.members.forEach(member => { %>
                     <tr>
-                        <td> <% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""> <% }else{ %><img src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %></td>
+                        <td> <% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""> <% }else{ %><img
+                                src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %></td>
                         <td><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></td>
                         <td><%= squad.name %></td>
-                        <td><a href="<%= member.website %>"><ion-icon name="logo-github"></ion-icon></a></td>
+                        <td><a href="<%= member.website %>">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a></td>
                     </tr>
                     <% }) %>
                 </tbody>

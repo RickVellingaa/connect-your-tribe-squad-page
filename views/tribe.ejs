@@ -1,7 +1,8 @@
 <%- include('./partials/head') %>
-
-<main>
+<nav>
     <%- include('./partials/navigation') %>
+</nav>
+<main>
     <div class="detail">
         <ion-icon class="playlists__menu" name="menu-outline"></ion-icon>
         <section class="detail__header">
@@ -10,7 +11,8 @@
                 <span class="squad__usp">Playlist</span>
                 <h1 class="squad__title">Onze Tribe</h1>
                 <p class="squad__description">Alle studenten in de tribe van FDND!</p>
-                <p class="squad__amount"><img src="/assets/favicon.jpeg" alt="Logo van squad A">Er zit meer dan 100 developers/designers in onze tribe!</p>
+                <p class="squad__amount"><img src="/assets/favicon.jpeg" alt="Logo van squad A">Er zit meer dan 100
+                    developers/designers in onze tribe!</p>
             </div>
         </section>
         <div class="students">
@@ -26,9 +28,12 @@
                     </tr>
                     <% members.forEach(member => { %>
                     <tr>
-                        <td> <% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""> <% }else{ %><img src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %></td>
+                        <td> <% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""> <% }else{ %><img
+                                src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %></td>
                         <td><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></td>
-                        <td><a href="<%= member.website %>"><ion-icon name="logo-github"></ion-icon></a></td>
+                        <td><a href="<%= member.website %>">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a></td>
                     </tr>
                     <% }) %>
                 </tbody>
