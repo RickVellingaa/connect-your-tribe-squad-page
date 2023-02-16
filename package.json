@@ -1,35 +1,34 @@
 {
-    "name": "connect-your-tribe-squad-page",
-    "version": "1.0.0",
-    "description": "Redesign je visitekaartje op basis van een bestaande API.",
-    "main": "index.js",
-    "type": "module",
-    "directories": {
-      "doc": "docs"
-    },
-    "scripts": {
-      "start": "node index.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/fdnd-task/connect-your-tribe-profile-card.git"
-    },
-    "keywords": [
-      "node",
-      "express",
-      "ejs"
-    ],
-    "author": "R. Vellinga <rick.vellinga@hva.nl>",
-    "license": "GPL-3.0",
-    "bugs": {
-      "url": "https://github.com/RickVellingaa/connect-your-tribe-squad-page/issues"
-    },
-    "homepage": "https://github.com/RickVellingaa/connect-your-tribe-squad-page#readme",
-    "dependencies": {
-      "dotenv": "^16.0.3",
-      "ejs": "^3.1.8",
-      "express": "^4.18.2"
-    }
+  "name": "connect-your-tribe-profile-card",
+  "version": "1.0.0",
+  "description": "Redesign je squadpage op basis van een bestaande API.",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fdnd-task/connect-your-tribe-profile-card.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ejs"
+  ],
+  "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/fdnd-task/connect-your-tribe-profile-card/issues"
+  },
+  "homepage": "https://github.com/fdnd-task/connect-your-tribe-profile-card#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
   }
-  
+}

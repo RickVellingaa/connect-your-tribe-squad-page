@@ -61,7 +61,12 @@ body {
     overflow: auto;
 }
 
-html, body, main, .navigation, .detail, .playlists {
+html,
+body,
+main,
+.navigation,
+.detail,
+.playlists {
     overflow: auto;
 }
 
@@ -189,7 +194,8 @@ a {
 }
 
 /* Indelen van website en achtergrond kleur */
-.playlists, .detail {
+.playlists,
+.detail {
     width: 100%;
     /* width: calc(100% - var(--navbarWidth)); */
     height: 100%;
@@ -206,7 +212,8 @@ a {
     padding-right: 2rem;
 }
 
-.playlists__menu, .playlists__menu1 {
+.playlists__menu,
+.playlists__menu1 {
     color: var(--white-color);
     padding-left: 2rem;
     padding-right: 2rem;
@@ -238,7 +245,7 @@ a {
 }
 
 ul:hover .playlists__item {
-    background-color: hsla(0,10%,100%,.15);
+    background-color: hsla(0, 10%, 100%, .15);
     transition: .3s;
 }
 
@@ -281,7 +288,7 @@ ul .playlists__item {
 }
 
 /* Detail pagina CSS */
-.detail__header { 
+.detail__header {
     height: 30vh;
     min-height: 340px;
     max-height: 500px;
@@ -310,7 +317,10 @@ ul .playlists__item {
     flex-direction: column;
 }
 
-.squad__amount, .squad__description, .squad__title, .squad__usp{
+.squad__amount,
+.squad__description,
+.squad__title,
+.squad__usp {
     padding: .3rem 0;
 }
 
@@ -330,7 +340,8 @@ ul .playlists__item {
     color: var(--txt-color);
 }
 
-.squad__description, .squad__amount {
+.squad__description,
+.squad__amount {
     font-size: 1rem;
     display: flex;
     justify-content: flex-start;
@@ -346,7 +357,7 @@ ul .playlists__item {
 }
 
 .students {
-    color:  var(--txt-color);
+    color: var(--txt-color);
     font-family: var(--textFont);
     font-weight: lighter;
     font-size: .9rem;
@@ -357,44 +368,45 @@ ul .playlists__item {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  .students td, th {
+}
+
+.students td,
+th {
     text-align: left;
     padding: .2rem 0;
     color: white;
     text-shadow: rgb(0, 0, 0) 2px 0 10px;
     font-family: var(--titleFont);
-  }
+}
 
-  .students tr:first-child {
+.students tr:first-child {
     border-bottom: 1px solid #dddddd;
-  }
+}
 
-  .students tr td img{
+.students tr td img {
     width: 50px;
     aspect-ratio: 1/1;
     margin-right: 10px;
-  }
-  
-  .students tr td:first-child {
+}
+
+.students tr td:first-child {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 1rem;
-  }
+}
 
-  .students tr td{
+.students tr td {
     font-size: .8rem;
-  }
+}
 
-  ion-icon {
+ion-icon {
     color: var(--txt-color);
     font-size: 1.4em;
-  }
+}
 
-  /* Responsive media query's */
-  @media screen and (max-width: 1200px) {
+/* Responsive media query's */
+@media screen and (max-width: 1200px) {
     .playlists__list ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -402,32 +414,37 @@ ul .playlists__item {
         grid-gap: 20px;
         list-style-type: none;
     }
-  }
+}
 
-  @media screen and (max-width: 950px) {
+@media screen and (max-width: 950px) {
     .hidden {
         display: none;
 
     }
-    .detail, .playlists{
+
+    .detail,
+    .playlists {
         width: 100%;
     }
+
     .playlists__heading {
         margin-top: 0rem;
     }
+
     .playlists__menu {
         display: inline-block;
         visibility: visible;
     }
+
     .playlists__menu1 {
         display: inline-block;
         visibility: visible;
         padding: 0;
         margin: .5rem;
     }
-  }
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .playlists__list ul {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -435,14 +452,17 @@ ul .playlists__item {
         grid-gap: 20px;
         list-style-type: none;
     }
+
     .detail__logo {
         display: none;
         visibility: hidden;
     }
+
     .detail__squad {
         padding-left: 0;
     }
+
     .detail__header {
         min-height: auto;
     }
-  }
+}
