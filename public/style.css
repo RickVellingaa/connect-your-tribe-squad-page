@@ -244,12 +244,12 @@ a {
     position: relative;
 }
 
-ul:hover .playlists__item {
+ .playlists__item:hover {
     background-color: hsla(0, 10%, 100%, .15);
     transition: .3s;
 }
 
-ul .playlists__item {
+ .playlists__item {
     transition: .3s;
 }
 
