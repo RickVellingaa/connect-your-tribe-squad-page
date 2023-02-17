@@ -77,7 +77,7 @@ app.get('/', (request, response) => {
 // Maak een route voor de members
 app.get('/members', (request, response) => {
 
-  let id = request.query.member || 'cldemsxee3oeg0avw60bcsibn'
+  let id = request.query.member || 'cldeo1dg33rqf0bw5jh4jpuk2'
   let memberUrl = 'https://whois.fdnd.nl/api/v1/member?id=' + id
   
   fetchJson(memberUrl).then((data) => {
