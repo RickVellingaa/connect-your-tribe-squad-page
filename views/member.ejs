@@ -1,12 +1,18 @@
 <%- include('./partials/head') %>
 
-<main>
-  <div class="members">
-    <p><%= member.prefix %></p>
-    <p><%= member.name %></p>
-    <p><%= member.surname %></p>
-    <p><%= member.nickname %></p>
-    <a href="<%= member.website %>"><ion-icon name="logo-github"></ion-icon></a>
+<main class="main-member">
+  <div class="members" style="background-color: #033666de;">
+  <!-- <div class="members" style="background-color: <member.colour.hex %>40;"> -->
+    <img class="member__image" src="<%= member.avatar %>" alt="Avatar van <%= member.name %>">
+    <div class="member__info">
+      <div class="member__name">
+        <h1>
+          <span class="member__fname"><%= member.name %> <%= member.surname %></span>
+          <span class="member__nickname"><%= member.nickname %></span>
+        </h1>
+        <ion-icon name="heart-outline"></ion-icon>
+      </div>   
+    </div>
   </div>
 </main>
 
