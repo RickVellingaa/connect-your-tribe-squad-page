@@ -41,7 +41,12 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
-  res.render('index', dataRandom)
+
+  let squadUrl = urlRandom + '&direction=ASC'
+
+  fetchJson(squadUrl).then((dataRandom) => {
+    res.render('index', dataRandom)
+  })
 })
 
 app.get('/squadA', function (req, res) {
@@ -86,7 +91,11 @@ app.get('/rest', function (req, res) {
 })
 
 app.get('/tribe', function (req, res) {
-  fetchJson(url).then((data) => {
+
+  let orderBy = req.query.orderBy || 'name' + '&direction=ASC'
+  let squadUrl = url + '?&orderBy=' + orderBy + '&direction=ASC'
+
+  fetchJson(squadUrl).then((data) => {
     res.render('tribe', data)
   })
 })

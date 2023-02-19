@@ -327,6 +327,24 @@ a {
     border-color: #5bd9b3;
 }
 
+.playlists__filters {
+    padding:  1rem 0;
+}
+
+.playlists__filters a {
+    color: var(--white-color);
+    margin-right: .5rem;
+    padding: .5rem 1rem .5rem 1rem;
+    border: 1px solid var(--txt-color);
+    border-radius: 30px;
+    text-shadow: rgb(0, 0, 0, 1) 2px 0 10px;    
+}
+
+.playlists__filters a:hover {
+    background-color: #5bd9b3;
+    border-color: #5bd9b3;
+}
+
 .detail__filters a {
     color: var(--white-color);
     margin-right: .5rem;
