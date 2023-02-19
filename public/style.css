@@ -458,6 +458,7 @@ a {
 .members {
     color: white;
     width: 40%;
+    min-width: 650px;
     height: 100%;
     position: relative;
     /* background-color: red; */
@@ -550,6 +551,22 @@ a {
     }
 }
 
+@media screen and (max-width: 650px) {
+    .members { 
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .member__image, .member__info {
+        padding:  0 2.5rem;
+        min-width: 400px;
+    }
+    .member__image {
+        padding-top: 4rem;
+        min-width: 400px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .playlists__list ul {
         display: grid;
@@ -570,5 +587,20 @@ a {
 
     .detail__header {
         min-height: auto;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .members { 
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .member__image, .member__info {
+        padding:  0 2.5rem;
+        min-width: 350px;
+    }
+    .member__image {
+        padding-top: 4rem;
     }
 }
