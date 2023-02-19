@@ -45,15 +45,36 @@ app.get('/', function (req, res) {
 })
 
 app.get('/squadA', function (req, res) {
-  res.render('squadA', dataA)
+
+  let slug = req.query.squad || 'squad-a-2022'
+  let orderBy = req.query.orderBy || 'name' + '&direction=ASC'
+  let squadUrl = urlA + '?orderBy=' + orderBy + '&direction=ASC'
+
+  fetchJson(squadUrl).then((dataA) => {
+    res.render('squadA', dataA)
+  })
 })
 
 app.get('/squadB', function (req, res) {
-  res.render('squadB', dataB)
+
+  let slug = req.query.squad || 'squad-a-2022'
+  let orderBy = req.query.orderBy || 'name' + '&direction=ASC'
+  let squadUrl = urlB + '?orderBy=' + orderBy + '&direction=ASC'
+
+  fetchJson(squadUrl).then((dataB) => {
+    res.render('squadB', dataB)
+  })
 })
 
 app.get('/squatC', function (req, res) {
-  res.render('squatC', dataC)
+
+  let slug = req.query.squad || 'squad-a-2022'
+  let orderBy = req.query.orderBy || 'name' + '&direction=ASC'
+  let squadUrl = urlC + '?orderBy=' + orderBy + '&direction=ASC'
+
+  fetchJson(squadUrl).then((dataC) => {
+    res.render('squatC', dataC)
+  })
 })
 
 app.get('/liked', function (req, res) {
@@ -65,14 +86,16 @@ app.get('/rest', function (req, res) {
 })
 
 app.get('/tribe', function (req, res) {
-  res.render('tribe', data)
+  fetchJson(url).then((data) => {
+    res.render('tribe', data)
+  })
 })
 
 
 // Maak een route voor de index
 app.get('/', (request, response) => {
     response.render('index', data)
-})
+});
 
 // Maak een route voor de members
 app.get('/members', (request, response) => {

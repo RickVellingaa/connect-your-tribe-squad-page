@@ -15,6 +15,11 @@
                     squad!</p>
             </div>
         </section>
+        <div class="detail__filters">
+            <a href="?squad=<%= squad.slug %>&orderBy=name" class="filterBTN">Voornaam</a>
+            <a href="?squad=<%= squad.slug %>&orderBy=surname" class="filterBTN">Achternaam</a>
+            <a href="?squad=<%= squad.slug %>&orderBy=gitHubHandle" class="filterBTN">GitHub</a>
+        </div>
         <div class="students">
             <div class="students__menu">
                 <div>Student</div>

@@ -289,15 +289,15 @@ a {
 
 /* Detail pagina CSS */
 .detail__header {
-    height: 30vh;
+    /* height: 30vh;
     min-height: 340px;
-    max-height: 500px;
+    max-height: 500px; */
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
 }
 
 .detail__logo {
@@ -315,6 +315,25 @@ a {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+}
+
+.detail__filters {
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+}
+
+.detail__filters a:hover {
+    background-color: #5bd9b3;
+    border-color: #5bd9b3;
+}
+
+.detail__filters a {
+    color: var(--white-color);
+    margin-right: .5rem;
+    padding: .5rem 1rem .5rem 1rem;
+    border: 1px solid var(--txt-color);
+    border-radius: 30px;
+    text-shadow: rgb(0, 0, 0, 1) 2px 0 10px;    
 }
 
 .squad__amount,
