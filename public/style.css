@@ -164,6 +164,11 @@ a {
     transition: .3s;
 }
 
+.navigation__item a:active {
+    font-weight: 900;
+    color: red;
+}
+
 .navigation__item:hover {
     color: var(--white-color);
     transition: .3s;
