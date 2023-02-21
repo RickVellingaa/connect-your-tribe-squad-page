@@ -166,7 +166,7 @@ a {
 
 .navigation__item a:active {
     font-weight: 900;
-    color: red;
+    /* color: red; */
 }
 
 .navigation__item:hover {
@@ -506,10 +506,12 @@ a {
 
 .member__name h1 span:first-child {
     font-size: .8em;
+    font-family: var(--titleFont);
 }
 
 .member__name h1 span:last-child {
     font-size: .6em;
+    font-family: var(--textFont);
 }
 
 .member__name ion-icon {
