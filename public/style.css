@@ -466,7 +466,7 @@ a {
     min-width: 650px;
     height: 100%;
     position: relative;
-    /* background-color: red; */
+    background: var(--member-background-color);
     font-family: var(--textFont);
     display: flex;
     justify-content: flex-start;
