@@ -602,6 +602,21 @@ a {
     }
 }
 
+@media screen and (max-width: 540px) {
+    .detail__filters a {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        display: none;
+    }
+    .detail__filters {
+        /* padding-top: 2em; */
+        padding-left: 2em;
+        padding-bottom: 0;
+    }
+    .students {
+        /* padding-top: 2em; */
+    }
+}
+
 @media screen and (max-width: 350px) {
     .members { 
         min-width: 100%;
