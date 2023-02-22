@@ -46,7 +46,7 @@ app.set('views', './views')
 app.use(express.static('public'))
 
 // Maak een route voor de index
-app.get('/', function (req, res) {
+app.get('/home', function (req, res) {
 
   let squadUrl = urlRandom + '&direction=ASC'
 
