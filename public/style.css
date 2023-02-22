@@ -611,3 +611,24 @@ a {
         padding-top: 4rem;
     }
 }
+
+
+/* r20222 */
+
+/* zoekbalk */
+
+.label-search{
+    cursor: pointer;
+}
+
+.searchBar{
+    /* display: inline-block; */
+    width:7rem;
+    margin-left: 1rem;
+    opacity: 0;
+}
+
+
+.visible-search{
+    opacity: 1;
+}
