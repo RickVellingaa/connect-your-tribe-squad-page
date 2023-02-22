@@ -6,24 +6,34 @@
     <div class="detail">
         <ion-icon class="playlists__menu" name="menu-outline"></ion-icon>
         <section class="detail__header">
-            <img class="detail__logo" src="/assets/favicon.jpeg" alt="Logo - Squad A">
+            <img class="detail__logo" src="/assets/minor-web.png" alt="Logo - Squad A">
             <div class="detail__squad">
                 <span class="squad__usp">Playlist</span>
                 <h1 class="squad__title">Overige</h1>
-                <p class="squad__description">Alle overige studenten die niet in een categorie vallen!</p>
+                <p class="squad__description">Alle overige studenten/members die niet in een categorie vallen!</p>
                 <p class="squad__amount"><img src="/assets/favicon.jpeg" alt="Logo van squad A">Dit zijn alle
-                    studenten/mensen die niet bij een bepaalde squad zitten!</p>
+                    studenten/mensen die niet bij een bepaalde squad zitten! (<%= squad.members.length %>)</p>
             </div>
         </section>
         <div class="students">
             <div class="students__menu">
                 <div>Student</div>
                 <div>Nickname</div>
-                <div>Squat</div>
+                <div>Squad</div>
             </div>
+            <% squad.members.forEach(member => { %>
+            <a href="/members?member=<%= member.id %>">
                 <div class="students__list">
+                    <div><% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""><% }else{ %><img
+                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %>
+                        <%= member.surname %></div>
+                    <div><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></div>
+                    <div>
+                       <%= squad.gitHubHandle %>
+                    </div>
                 </div>
             </a>
+            <% }) %>
         </div>
     </div>
 </main>

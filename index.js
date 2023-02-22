@@ -30,6 +30,12 @@ const dataRandom = await fetch(urlRandom)
   .then((response) => response.json())
   .catch((error) => error)
 
+ // API met random studenten
+const urlMinor= 'https://whois.fdnd.nl/api/v1/squad/minor-web-2023'
+const dataMinor = await fetch(urlMinor)
+  .then((response) => response.json())
+  .catch((error) => error) 
+
 // Maak een nieuwe express app
 const app = express()
 
@@ -87,7 +93,7 @@ app.get('/liked', function (req, res) {
 })
 
 app.get('/rest', function (req, res) {
-  res.render('rest')
+  res.render('rest', dataMinor)
 })
 
 app.get('/tribe', function (req, res) {
