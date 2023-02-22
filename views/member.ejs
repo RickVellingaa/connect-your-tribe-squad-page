@@ -6,13 +6,11 @@
   <% } else { %>
     <div class="members" style="--member-background-color: <%= member.colour?.hex %>">
     <% } %>
-  
-  <!-- <div class="members" style="background-color: < member.colour.hex %>40;"> -->
     <img class="member__image" src="<%= member.avatar %>" alt="Avatar van <%= member.name %>">
     <div class="member__info">
       <div class="member__name">
         <h1>
-          <span class="member__fname"><%= member.name %> <%= member.surname %></span>
+          <span class="member__fname"><%= member.name %> <%= member.prefix %> <%= member.surname %></span>
           <span class="member__nickname"><%= member.nickname %></span>
         </h1>
         <ion-icon name="heart-outline"></ion-icon>

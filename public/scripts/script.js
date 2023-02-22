@@ -17,5 +17,10 @@ function animHandler() {
     menuAnim.classList.toggle('hidden')
 }
 
-
-document.querySelector('.playlists__heading').textContent = new Date().getHours() >= 12 ? 'Goedemiddag!' : 'Goedemorgen!';
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a').forEach(link => {
+    if(link.href.includes(`${activePage}`)) {
+            console.log(`${activePage}`);
+            link.classList.add('active');
+    }
+}) 

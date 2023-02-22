@@ -1,8 +1,8 @@
 <%- include('./partials/head') %>
 
-<nav>
+
     <%- include('./partials/navigation') %>
-</nav>
+
 <main>
     <div class="playlists">
         <ion-icon class="playlists__menu" name="menu-outline"></ion-icon>
@@ -41,7 +41,7 @@
             <a href="/members?member=<%= member.id %>">
                 <div class="students__list">
                     <div><% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""><% }else{ %><img
-                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %>
+                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %> <%= member.prefix %>
                         <%= member.surname %></div>
                     <div><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></div>
                     <div>
