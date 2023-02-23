@@ -22,11 +22,13 @@ function animHandler() {
 
 const searchBar = document.getElementById('site-search')
 const labelSearch = document.querySelector('.label-search')
-console.log(labelSearch)
+
 labelSearch.addEventListener('click', visibleSearch)
 
 function visibleSearch(){
     searchBar.classList.toggle('visible-search');
+    labelSearch.hidden = true;
+
 }
 
 
