@@ -641,16 +641,22 @@ a {
     cursor: pointer;
 }
 
-.searchBar{
-    /* display: inline-block; */
-    width:7rem;
-    margin-left: 1rem;
+
+.search-form{
+    display: flex;
+    align-items: center;;
+    width: 5rem;
+}
+.searchBar {
     opacity: 0;
+    transform: translateX(-99999px);
 }
 
 
 .visible-search{
+    padding: 0.2em;
     opacity: 1;
+    transform: translateX(0);
     background-color: var(--fdnd-color);
 }
 .visible-search:focus{
