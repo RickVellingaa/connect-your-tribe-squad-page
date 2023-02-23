@@ -631,4 +631,9 @@ a {
 
 .visible-search{
     opacity: 1;
+    background-color: var(--fdnd-color);
+}
+.visible-search:focus{
+    border-color: var(--btn-color);
+    outline-color: var(--bg-color);
 }
