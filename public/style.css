@@ -631,3 +631,29 @@ a {
         padding-top: 4rem;
     }
 }
+
+
+/* r20222 */
+
+/* zoekbalk */
+
+.label-search{
+    cursor: pointer;
+}
+
+.searchBar{
+    /* display: inline-block; */
+    width:7rem;
+    margin-left: 1rem;
+    opacity: 0;
+}
+
+
+.visible-search{
+    opacity: 1;
+    background-color: var(--fdnd-color);
+}
+.visible-search:focus{
+    border-color: var(--btn-color);
+    outline-color: var(--bg-color);
+}
