@@ -1,3 +1,6 @@
+let squadMembers = null;
+
+
 let menuIcon = document.querySelector('.playlists__menu');
 let menuIcon1 = document.querySelector('.playlists__menu1');
 
@@ -38,3 +41,23 @@ labelSearch.addEventListener('click', visibleSearch)
 function visibleSearch(){
     searchBar.classList.toggle('visible-search');
 }
+
+
+
+searchBar.addEventListener('keyup', search)
+squadMembers = document.querySelectorAll('.students > a')
+
+function search() {
+    
+    const searchValue = this.value.toLowerCase()
+    
+    if(this.value === '') {
+      squadMembers.forEach(member => {
+        member.hidden = false;
+      })
+    } else {
+      squadMembers.forEach(member => {
+        member.hidden = !member.textContent.toLowerCase().includes(searchValue);
+      })
+    }
+  }
