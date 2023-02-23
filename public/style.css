@@ -198,6 +198,11 @@ a {
     padding: .4rem 0;
 }
 
+.active  {
+    font-weight: 900;
+    color: white !important;
+  }
+
 /* Indelen van website en achtergrond kleur */
 .playlists,
 .detail {
@@ -594,6 +599,21 @@ a {
 
     .detail__header {
         min-height: auto;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .detail__filters a {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        display: none;
+    }
+    .detail__filters {
+        /* padding-top: 2em; */
+        padding-left: 2em;
+        padding-bottom: 0;
+    }
+    .students {
+        /* padding-top: 2em; */
     }
 }
 

@@ -1,7 +1,11 @@
 <%- include('./partials/head') %>
 
 <main class="main-member">
-  <div class="members" style="--member-background-color: <%= member.colour?.hex %>40">
+  <% if (!member.colour?.hex) { %>
+    <div class="members" style="--member-background-color: red">
+  <% } else { %>
+    <div class="members" style="--member-background-color: <%= member.colour?.hex %>">
+    <% } %>
     <img class="member__image" src="<%= member.avatar %>" alt="Avatar van <%= member.name %>">
     <div class="member__info">
       <div class="member__name">

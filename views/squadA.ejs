@@ -1,7 +1,6 @@
 <%- include('./partials/head') %>
-<nav>
-    <%- include('./partials/navigation') %>
-</nav>
+<%- include('./partials/navigation') %>
+
 <main>
     <div class="detail">
         <ion-icon class="playlists__menu" name="menu-outline"></ion-icon>
@@ -11,7 +10,8 @@
                 <span class="squad__usp">Playlist</span>
                 <h1 class="squad__title">Squad A</h1>
                 <p class="squad__description">Niet veel te zien hier, kan beter naar Squat C!</p>
-                <p class="squad__amount"><img src="/assets/favicon.jpeg" alt="Logo van squad A"><%= squad.members.length %> Studenten in deze
+                <p class="squad__amount"><img src="/assets/favicon.jpeg"
+                        alt="Logo van squad A"><%= squad.members.length %> Studenten in deze
                     squad!</p>
             </div>
         </section>
@@ -31,11 +31,18 @@
             <a href="/members?member=<%= member.id %>">
                 <div class="students__list">
                     <div><% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""><% }else{ %><img
-                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %> <%= member.prefix %>
+                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %>
+                        <%= member.prefix %>
                         <%= member.surname %></div>
-                    <div><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></div>
+
+                    <div><% if (member.nickname) { %>
+                        <%= member.nickname %>
+                        <% }else{ %>
+                        <%= member.name  %>
+                        <% } %>
+                    </div>
                     <div>
-                       <%= squad.gitHubHandle %>
+                        <%= squad.name %>
                     </div>
                 </div>
             </a>
