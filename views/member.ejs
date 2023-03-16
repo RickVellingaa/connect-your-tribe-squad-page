@@ -2,21 +2,21 @@
 
 <main class="main-member">
   <% if (!member.colour?.hex) { %>
-    <div class="members" style="--member-background-color: red">
-  <% } else { %>
+  <div class="members" style="--member-background-color: red">
+    <% } else { %>
     <div class="members" style="--member-background-color: <%= member.colour?.hex %>">
-    <% } %>
-    <img class="member__image" src="<%= member.avatar %>" alt="Avatar van <%= member.name %>">
-    <div class="member__info">
-      <div class="member__name">
-        <h1>
-          <span class="member__fname"><%= member.name %> <%= member.prefix %> <%= member.surname %></span>
-          <span class="member__nickname"><%= member.nickname %></span>
-        </h1>
-        <ion-icon name="heart-outline"></ion-icon>
-      </div>   
+      <% } %>
+      <img class="member__image" src="<%= member.avatar %>" alt="Avatar van <%= member.name %>">
+      <div class="member__info">
+        <div class="member__name">
+          <h1>
+            <span class="member__fname"><%= member.name %> <%= member.prefix %> <%= member.surname %></span>
+            <span class="member__nickname"><%= member.nickname %></span>
+          </h1>
+          <ion-icon name="heart-outline"></ion-icon>
+        </div>
+      </div>
     </div>
-  </div>
 </main>
 
 <script src="./scripts/script.js"></script>

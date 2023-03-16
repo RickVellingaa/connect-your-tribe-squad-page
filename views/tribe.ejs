@@ -10,7 +10,8 @@
                 <span class="squad__usp">Playlist</span>
                 <h1 class="squad__title">Onze Tribe</h1>
                 <p class="squad__description">Alle studenten in de tribe van FDND!</p>
-                <p class="squad__amount"><img src="/assets/favicon.jpeg" alt="Logo van squad A">Er zitten <%= members.length %> developers/designers in onze tribe!</p>
+                <p class="squad__amount"><img src="/assets/favicon.jpeg" alt="Logo van squad A">Er zitten
+                    <%= members.length %> developers/designers in onze tribe!</p>
             </div>
         </section>
         <div class="detail__filters">
@@ -28,12 +29,15 @@
             <% members.forEach(member => { %>
             <a href="/members?member=<%= member.id %>">
                 <div class="students__list">
+                    <!-- Een for each loop waarbij elke member in een div terecht komt -->
                     <div><% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""><% }else{ %><img
-                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %> <%= member.prefix %>
+                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %>
+                        <%= member.prefix %>
                         <%= member.surname %></div>
+                    <!-- Als een member een member.nickname heeft dan wordt deze getoond, heeft een member geen nickname dan wordt zijn naam getoond -->
                     <div><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></div>
                     <div>
-                       <%= member.slug %>
+                        <%= member.slug %>
                     </div>
                 </div>
             </a>

@@ -23,12 +23,15 @@
             <% squad.members.forEach(member => { %>
             <a href="/members?member=<%= member.id %>">
                 <div class="students__list">
+                    <!-- Een for each loop waarbij elke member in een div terecht komt -->
                     <div><% if (member.avatar) { %><img src="<%= member.avatar %>" alt=""><% }else{ %><img
-                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %> <%= member.prefix %>
+                            src="/assets/favicon.jpeg" alt="Logo van squad A"><% } %><%= member.name %>
+                        <%= member.prefix %>
                         <%= member.surname %></div>
+                    <!-- Als een member een member.nickname heeft dan wordt deze getoond, heeft een member geen nickname dan wordt zijn naam getoond -->
                     <div><% if (member.nickname) { %><%= member.nickname %><% }else{ %><%= member.name %><% } %></div>
                     <div>
-                       <%= squad.gitHubHandle %>
+                        <%= squad.gitHubHandle %>
                     </div>
                 </div>
             </a>

@@ -1,13 +1,16 @@
 import express from 'express'
 
-// API met bijna alle studenten
+
+// Haalt de API gegevens op
 const url = 'https://whois.fdnd.nl/api/v1/members?first=200'
+//  Haalt alle data op en wacht voordat voorgaande functions worden uitgevoerd
 const data = await fetch(url)
   .then((response) => response.json())
   .catch((error) => error)
 
-// API met alle studenten van Squad A
+// Haalt de API gegevens op
 const urlA = 'https://whois.fdnd.nl/api/v1/squad/squad-a-2022'
+//  Haalt alle data op en wacht voordat voorgaande functions worden uitgevoer
 const dataA = await fetch(urlA)
   .then((response) => response.json())
   .catch((error) => error)
@@ -39,7 +42,6 @@ const dataMinor = await fetch(urlMinor)
 // Maak een nieuwe express app
 const app = express()
 
-
 // Stel in hoe we express gebruiken
 app.set('view engine', 'ejs')
 app.set('views', './views')
@@ -49,12 +51,12 @@ app.use(express.static('public'))
 app.get('/home', function (req, res) {
 
   let squadUrl = urlRandom + '&direction=ASC'
-
   fetchJson(squadUrl).then((dataRandom) => {
     res.render('index', dataRandom)
   })
 })
 
+// Maakt een route voor de squad A pagina
 app.get('/squadA', function (req, res) {
 
   let slug = req.query.squad || 'squad-a-2022'
@@ -66,6 +68,7 @@ app.get('/squadA', function (req, res) {
   })
 })
 
+// Maakt een route voor de squad B pagina
 app.get('/squadB', function (req, res) {
 
   let slug = req.query.squad || 'squad-a-2022'
@@ -77,6 +80,7 @@ app.get('/squadB', function (req, res) {
   })
 })
 
+// Maakt een route voor de squat C pagina
 app.get('/squatC', function (req, res) {
 
   let slug = req.query.squad || 'squad-a-2022'
@@ -88,14 +92,17 @@ app.get('/squatC', function (req, res) {
   })
 })
 
+// Maakt een route voor de liked pagina
 app.get('/liked', function (req, res) {
   res.render('liked')
 })
 
+// Maakt een route voor de overige pagina
 app.get('/rest', function (req, res) {
   res.render('rest', dataMinor)
 })
 
+// Maakt een route voor de tribe pagina
 app.get('/tribe', function (req, res) {
 
   let orderBy = req.query.orderBy || 'name' + '&direction=ASC'
@@ -129,15 +136,10 @@ app.get('/members', (request, response) => {
 })
 
 
-// Maak een route voor de members
+// Maak een route voor de about pagina
 app.get('/about', (request, response) => {
   response.render('about')
 })
-
-
-// app.get('/members', (request, response) => {
-//   response.send('Joepie!!')
-// })
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 1000)
@@ -145,11 +147,6 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-/**
- * Wraps the fetch api and returns the response body parsed through json
- * @param {*} url the api endpoint to address
- * @returns the json response from the api endpoint
- */
 async function fetchJson(url) {
   return await fetch(url)
     .then((response) => response.json())
