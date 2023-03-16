@@ -24,6 +24,10 @@ Voor het maken van de squad page heb ik vooral gebruik gemaakt van NodeJS en een
  * HTML
  * CSS
  * JS
+ 
+NodeJS organiseert de Javascript op de server. Met NodeJS kan ik data uit de WHOIS api ophalen.
+Express is het framework dat de routing regelt waar de data vandaan kan worden gehaald.
+EJS is een templating language waarmee je plain HTML kan genereren.
 
 ## Installatie
 
