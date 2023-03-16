@@ -20,6 +20,8 @@ Het doel van de leertaak was om een nieuwe squad page te gaan designen, de bedoe
 Voor het maken van de squad page heb ik vooral gebruik gemaakt van NodeJS en een API. Ik heb door middel van NodeJS en Express studenten opgehaald uit een JSON bestand van de API. Voor de rest heb ik HTML, CSS en JS gebruikt om een spotify pagina proberen na te maken die ik dan in plaats van met liedjes, ik ze vul met studenten. 
 
  * NodeJS
+ * EJS
+ * Express
  * Rest API
  * HTML
  * CSS
